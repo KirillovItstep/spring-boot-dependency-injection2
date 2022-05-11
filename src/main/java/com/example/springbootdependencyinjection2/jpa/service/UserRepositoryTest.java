@@ -1,5 +1,18 @@
 package com.example.springbootdependencyinjection2.jpa.service;
 
+import com.example.springbootdependencyinjection2.jpa.model.User;
+import com.example.springbootdependencyinjection2.jpa.repository.UserRepository;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.testng.annotations.Test;
+import javax.annotation.Resource;
+import java.text.DateFormat;
+import java.util.Date;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserRepositoryTests {
