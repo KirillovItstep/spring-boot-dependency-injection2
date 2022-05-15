@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Runner {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(
-                ConfigurationGreeting.class);
+                GreetingConfiguration.class);
         GreetingService greetingService = context.getBean(GreetingService.class);
         System.out.println(greetingService.sayGreeting());
     }

@@ -1,8 +1,23 @@
 package com.example.springbootdependencyinjection2.jpa.service;
 
+import com.example.springbootdependencyinjection2.jpa.model.Address;
+import com.example.springbootdependencyinjection2.jpa.model.UserDetail;
+import com.example.springbootdependencyinjection2.jpa.model.UserInfo;
+import com.example.springbootdependencyinjection2.jpa.repository.AddressRepository;
+import com.example.springbootdependencyinjection2.jpa.repository.UserDetailRepository;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.testng.annotations.Test;
+
+import javax.annotation.Resource;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserDetailRepositoryTests {
+public class UserDetailRepositoryTest {
 
     @Resource
     private AddressRepository addressRepository;

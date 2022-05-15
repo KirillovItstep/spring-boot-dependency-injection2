@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.core.SpringVersion;
 
 /*SpringBootApplication включает:
 Configuration, EnableAutoConfiguration, ComponentScan
@@ -31,6 +32,13 @@ public class ComponentScanDemo {
         applicationContext.getBean(Dog.class).sound();
 
         //Содержит ли контекст приложения указанный бин
-        System.out.println(applicationContext.containsBean("cat"));
+        System.out.println("Context contains bean cat: "+ applicationContext.containsBean("cat"));
+         //Версия Spring
+        System.out.println("Spring version: "+SpringVersion.getVersion());
+        //Версия Hibernate
+        System.out.println("Hibernate version: "+org.hibernate.Version.getVersionString());
+        //Версия Java
+        System.out.println("Java version: "+System.getProperty("java.version"));
+
     }
 }
